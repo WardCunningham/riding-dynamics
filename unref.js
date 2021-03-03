@@ -1,7 +1,8 @@
 // list pages with no inbound references
 // deno run --allow_net unref.js
 
-let sitemap = await fetch('http://dynamics.ward.asia.wiki.org/system/sitemap.json').then(res => res.json())
+let url = 'http://dynamics.ward.asia.wiki.org/system/sitemap.json'
+let sitemap = await fetch(url).then(res => res.json())
 
 let refs = {}
 for (let info of sitemap) {
